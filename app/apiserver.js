@@ -1,6 +1,6 @@
 const express = require('express');
 const db = require('./config/dbinfo');
-const router = express.Rounter();
+const router = express.Router();
 
 // Create a joke
 router.post('/jokes', (req, res) => {
