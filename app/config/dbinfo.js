@@ -20,4 +20,4 @@ db.connect((error) => {
 });
 
 // Making the databse connection available for use in other JavaScript files
-module.export = db;
+module.exports = db;
