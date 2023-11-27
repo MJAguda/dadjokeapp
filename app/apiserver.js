@@ -13,6 +13,33 @@ router.post('/jokes', (req, res) => {
     });
 });
 
+// All jokes
+router.get('/jokes', (req, res) => {
+    let sql = 'SELECT * FROM jokes';
+    db.query(sql, (err, result) => {
+        if(err) throw err;
+        res.send(result);
+    });
+});
+
+// A single joke
+router.get('japi/jokes/:id', (req, res) => {
+    let sql = `SELECT * FROM jokes WHERE id=${req.params.id}`;
+    db.query(sql, (err, result) => {
+        if(err) throw err;
+        res.send(result);
+    });
+});
+
+// A random joke
+router.get('/randomjokes', (req, res) => {
+    let sql = 'SELECT * FROM jokes ORDER BY RAND() LIMIT 1';
+    db.query(sql, (err, result) => {
+        if(err) throw err;
+        res.send(result);
+    });
+});
+
 // Update a joke
 router.put('/jokes/:id', (req, res) => {
     let joke = req.body;
