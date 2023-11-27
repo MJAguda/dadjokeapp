@@ -4,10 +4,17 @@
         <title>Dad Jokes</title>
     </head>
 
-    <body>
-        <h1 class="display-4">Dad Jokes</h1>
-        <p class="lead">Get ready to laugh!</p>
-    <!-- </body> -->
+    <body onload="getRandomJoke()"> <!-- Call the function on page load -->
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Dad Jokes</h1>
+            <p class="lead">Get ready to laugh!</p>
+            <hr class="my-4">
+            <h3 id="joke-question"></h3>
+            <p id="joke-answer"></p>
+            <button class="btn btn-primary" onclick="getRandomJoke()">Get Another Joke</button>
+            <a href="/featuyres/addjoke/addjoke.html" class="btn btn-success">Add a Joke</a>
+             <a href="/featuyres/jokelist/jokelist.html" class="btn btn-info">List all Jokes</a>
+        </div>  
 
     <script>
         // Function to get a random joke
