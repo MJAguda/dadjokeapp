@@ -3,11 +3,11 @@ const mysql = require('mysql');
 
 // The connection infor for the database
 const db = mysql.createConnection({
-    host: 'mysqldb1.mysql.database.azure.com',
-    user: 'mydbadmin',
-    password: '#1000joke$',
-    database: 'jokesdb'
-});
+    host: 'mysql12523.mysql.database.azure.com',
+    user: 'USER',
+    password: 'PWD',
+    database: 'DB'
+  });
 
 // Function for connecting to the database with error handling if connection fails
 db.connect((error) => {
